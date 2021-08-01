@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "../../contexts/auth0-context";
 import Loading from "../Loading/Loading";
-import Footer from "../Footer/Footer";
 import "./Home1.scss";
 import axios from "axios";
 
@@ -49,17 +48,17 @@ const Home1 = () => {
           <div className="userCont">
             <div className="userContChild">
               <div className="noticeDiv">
-                <h1 className="noticeH1">
+                <p className="noticeP">
                 &nbsp; Safari users will be logged out on refresh due to
                   Safari's recent crackdown on cross-site cookie tracking. Auth0 is working on a solution for this, but until then, being
                   logged out only occurs on Safari.
-                </h1>
+                </p>
               </div>
 
               <div className="headDiv">
                 <h1 className="homeHead">
                   Welcome,{" "}
-                  {dbUser.given_name != "null"
+                  {dbUser.given_name !== "null"
                     ? dbUser.given_name
                     : dbUser.nickname}
                   !
@@ -81,9 +80,9 @@ const Home1 = () => {
                         issue.solved === 0 && (
                           <Link key={issue.uid} to={`/issues/${issue.uid}`}>
                             <div className="issuePost">
-                              <h3 className="issueTitle">
+                              <h4 className="issueTitle">
                                 {issue.issue_title}
-                              </h3>
+                              </h4>
                               <div className="openDateTime">
                                 <p className="issueNickname">
                                   {issue.nickname}
@@ -111,9 +110,9 @@ const Home1 = () => {
                         issue.solved === 1 && (
                           <Link key={issue.uid} to={`/issues/${issue.uid}`}>
                             <div className="issuePost">
-                              <h3 className="issueTitle">
+                              <h4 className="issueTitle">
                                 {issue.issue_title}
-                              </h3>
+                              </h4>
                               <div className="solvedDateTime">
                                 <p className="issueNickname">
                                   {issue.nickname}

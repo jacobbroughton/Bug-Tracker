@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useAuth0 } from "../../contexts/auth0-context";
 import Loading from "../Loading/Loading";
 import axios from "axios";
-import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import "./Profile1.scss";
 
@@ -13,7 +12,6 @@ const Profile1 = () => {
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
   const [issueArr, setIssueArr] = useState([]);
-  const [reversedArr, setReversedArr] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getIssue = () => {
@@ -35,12 +33,10 @@ const Profile1 = () => {
   }
 
   const handleSubmitName = e => {
-    console.log(`Submitting name: ${first} ${last}`);
     addName();
   };
 
   const handleSubmitCompRole = e => {
-    console.log(`Submitting company and role: ${role} at ${company}`);
     addCompRole();
   };
 

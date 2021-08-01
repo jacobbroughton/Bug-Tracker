@@ -22,7 +22,7 @@
       text-align: center;
 
       .demoLoginDiv{
-        background: lightgrey;
+        background:#e9e9e9;;
         padding: 5px 10px;
         border-radius: 3px;
         margin-top: 20px;
@@ -53,8 +53,10 @@
         .noticeDiv{
           background: yellow;
           padding: 10px;
-          .noticeH1{
-            font-size: 1.5rem;
+          width: calc(100% - 20px);
+          font-weight: 500;
+          .noticeP{
+            // font-size: 1.5rem;
             text-align: center;
             &:before{
               content: 'Notice';
@@ -65,12 +67,12 @@
             }
           }
           @media(max-width: 830px) {
-            .noticeH1{
+            .noticeP{
               font-size: 1.2rem;
             }
           }
           @media(max-width: 550px) {
-            .noticeH1{
+            .noticeP{
               font-size: 1.0rem;
             }
           }
@@ -94,8 +96,8 @@
               width: 140px;
               border: none;
               border-radius: 5px;
-              background: red;
-              color: #333;
+              background: black;
+              color: #fff;
               font-weight: 700;
               font-size: 1rem;
               padding: 10px;
@@ -119,12 +121,14 @@
             width: 50%;
             padding: 20px;
             .openHeadDiv {
+              width: 100%;
               .openHead {
+                text-align: start;
               }
             }
 
             .openIssuesList {
-              width: calc(100% - 40px);
+              width: 100%;
               display: flex;
               align-items: flex-start;
               flex-direction: column;
@@ -136,7 +140,7 @@
                 align-items: flex-start;
                 margin-top: 15px;
                 padding: 10px;
-                background: lightgrey;
+                background:#e9e9e9;;
                 border-radius: 3px;
                 border-left: red solid 5px;
 
@@ -146,6 +150,7 @@
                 .issueTitle {
                   margin-bottom: 10px;
                   text-align: start;
+                  font-weight: 500;
                 }
 
                 .openDateTime {
@@ -157,10 +162,11 @@
                   border-radius: 3px;
 
                   .issueNickname {
-                      font-weight: 700;
+                      font-weight: 500;
+                      font-size: 0.9rem;
                     &:before {
                       font-weight: 400;
-                      content: "Asked By \00a0";
+                      content: "Asked by \00a0";
                     }
                   }
 
@@ -186,12 +192,14 @@
             align-items: center;
             flex-direction: column;
             .solvedHeadDiv {
+              width: 100%;
               .solvedHead {
+                text-align: start;
               }
             }
 
             .solvedIssuesList {
-            width: calc(100% - 40px);
+            width: 100%;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -203,13 +211,14 @@
                 align-items: flex-start;
                 margin-top: 15px;
                 padding: 10px;
-                background: lightgrey;
+                background:#e9e9e9;
                 border-radius: 3px;
                 width: calc(100% - 20px);
                 align-self: flex-start;
                 border-left: green solid 5px;
 
                 .issueTitle {
+                  font-weight: 500;
                   margin-bottom: 10px;
                   text-align: start;
                 }
@@ -230,7 +239,8 @@
                   }
 
                   .issueNickname {
-                    font-weight: 700;
+                    font-weight: 500;
+                    font-size: 0.9rem;
                     &:before {
                       font-weight: 400;
                       content: "Asked By \00a0";
@@ -256,14 +266,6 @@
     .home1Main {
         .userCont {
           .userContChild {
-            .headDiv {
-              .homeHead {
-              }
-              .promptBtnDiv {
-                .issuePromptBtn {
-                }
-              }
-            }
             .issuesParent {
               .openIssuesDiv {
                 .openIssuesList{
@@ -282,21 +284,6 @@
                       .issueTitle{
                           font-size: 1.4rem;
                       }
-                    .solvedDateTime {
-                      .issueNickname {
-                        &:after {
-                          content: "\00a0  ||| \00a0";
-                        }
-                      }
-  
-                      .issueDate {
-                        &:after {
-                          content: "\00a0  ||| \00a0";
-                        }
-                      }
-                      .issueTime {
-                      }
-                    }
                   }
                 }
               }
@@ -326,7 +313,7 @@
           .issuesParent {
             flex-direction: column;
             .openIssuesDiv {
-              width: calc(100% - 40px);
+              width: 100%;
               .openIssuesList{
                   .issuePost{
                       .openDateTime{
@@ -407,8 +394,11 @@
               width: 100%;
               padding: 0;
               .solvedHeadDiv{
+                width: 100%;
                 .solvedHead{
+                  width: 100%;
                   margin-top: 30px;
+                  text-align: start;
                 }
               }
               .solvedIssuesList {

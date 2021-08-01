@@ -2,9 +2,6 @@ import React from "react";
 // import { useSelector, useDispatch } from "react-redux";
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
 } from "react-router-dom";
 import NavBar from "./components/Navbar/NavBar";
 import { useAuth0 } from "./contexts/auth0-context";
@@ -14,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 const App = () => {
-  const { isLoading, user } = useAuth0();
+  const { isLoading } = useAuth0();
 
   if (isLoading) {
     return <Loading />;

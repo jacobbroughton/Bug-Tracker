@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Redirect, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./IssuePost1.scss";
 import axios from "axios";
 import { useAuth0 } from "../../contexts/auth0-context";

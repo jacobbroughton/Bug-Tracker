@@ -3,7 +3,6 @@ import { useAuth0 } from "../../contexts/auth0-context";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
-import Footer from "../Footer/Footer";
 import "./AllIssues1.scss";
 
 const AllIssues1 = () => {
@@ -51,7 +50,7 @@ const AllIssues1 = () => {
         {issueArr.reverse().map(issue => (
           <Link key={issue.uid} to={`/issues/${issue.uid}`}>
             <div className="issuePost">
-              <h2 className="issueTitle">{issue.issue_title}</h2>
+              <h4 className="issueTitle">{issue.issue_title}</h4>
 
               <div className="issueParaDiv">
                 <p className="issuePara">{`${issue.date_created} | ${issue.time_created}`}</p>

@@ -32,12 +32,16 @@ textarea {
         height: 10px;
         font-size: 1rem;
         padding: 10px;
+        border: 1px solid grey;
       }
       .issueTextInput {
         margin-bottom: 15px;
         height: 230px;
         font-size: 0.9rem;
         padding: 10px;
+        font-family: inherit;
+        border: 1px solid grey;
+        resize: vertical;
       }
       .issueSubmit {
         width: 50%;
